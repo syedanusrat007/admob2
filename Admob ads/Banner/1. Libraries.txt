@@ -1,0 +1,21 @@
+1. Manifest
+
+    <uses-permission android:name="android.permission.INTERNET"> </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"> </uses-permission>
+
+
+
+
+2. Build.Grudle
+
+ implementation 'com.google.android.gms:play-services-ads:12.0.0'
+
+
+
+
+
+3. Java Import
+
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;

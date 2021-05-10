@@ -1,0 +1,46 @@
+1.STEP1
+
+private InterstitialAd mInterstitialAd;
+
+
+
+
+2.STEP2
+
+
+mInterstitialAd = new InterstitialAd(this);
+mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
+ mInterstitialAd.loadAd(new AdRequest.Builder().build());
+  mInterstitialAd.setAdListener(new AdListener() {
+        @Override
+        public void onAdClosed() {
+            // Load the next interstitial.
+            mInterstitialAd.loadAd(new AdRequest.Builder().build());
+        }
+
+    });
+
+
+
+
+
+
+3. Step
+
+
+
+  public void Intertialshow()
+    {
+        if (mInterstitialAd.isLoaded()) {
+            mInterstitialAd.show();
+        } else {
+            finish();
+        }
+    }
+
+
+    @Override
+    public void onBackPressed()
+    {
+        Intertialshow();
+    }
